@@ -1,0 +1,12 @@
+# AutoArchive configuration file for incremental backup
+
+[Archive]
+incremental = yes
+restarting = yes
+restart-after-level = 9
+remove-obsolete-backups = yes
+
+[Content]
+path = /opt/aa/mounts
+include-files = *
+exclude-files =

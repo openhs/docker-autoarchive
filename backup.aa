@@ -1,0 +1,6 @@
+# AutoArchive configuration file for simple backup
+
+[Content]
+path = /opt/aa/mounts
+include-files = *
+exclude-files =
