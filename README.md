@@ -88,9 +88,11 @@ creation therefore requires specifying desired host directories as volumes mount
 the paths above.
 
 The incremental backup creates 9 increments before restarting back to increment level 1.
-When restarting, all the existing increments are renamed ("aa" is inserted to the names).
+When restarting, new level 1 increment is created and all the old increments (level 2
+to level 9) are removed.
 
 
 ## Reference
 
 + [AutoArchive documentation](http://autoarchive.sourceforge.net/doc/user/index.html)
++ [AutoArchive homepage](http://autoarchive.sourceforge.net)

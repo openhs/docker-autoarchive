@@ -12,7 +12,7 @@
 FROM python:3.5-slim
 
 MAINTAINER openhs
-LABEL version="0.0.0" \
+LABEL version="0.0.1" \
       description="Simple backup tool Docker image."
 
 
