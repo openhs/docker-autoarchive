@@ -3,16 +3,16 @@
 # Project: AutoArchive Docker image
 # License: GNU GPLv3
 #
-# Copyright (C) 2015 Robert Cernansky
+# Copyright (C) 2015 - 2018 Robert Cernansky
 
 # Dockerfile for AutoArchive Docker image.
 
 
 
-FROM python:3.5-slim
+FROM python:slim
 
 MAINTAINER openhs
-LABEL version="0.0.1" \
+LABEL version="0.0.2" \
       description="Simple backup tool Docker image."
 
 
