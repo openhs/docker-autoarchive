@@ -12,17 +12,18 @@
 FROM python:slim
 
 MAINTAINER openhs
-LABEL version="0.0.2" \
+LABEL version="0.0.3" \
       description="Simple backup tool Docker image."
 
 
 
 RUN pip3 install autoarchive
 
-RUN sed -i 's:#\(archive-specs-dir\).\+:\1 = /opt/aa/archive_specs:' \
-        /etc/aa/aa.conf && \
-    sed -i 's:#\(user-config-dir\).\+:\1 = /opt/aa/user_config_dir:' \
-        /etc/aa/aa.conf && \
+RUN mkdir /etc/aa && \
+    /bin/echo -e \
+      "[General]\n\
+       archive-specs-dir = /opt/aa/archive_specs\n\
+       user-config-dir = /opt/aa/user_config_dir" >> /etc/aa/aa.conf && \
     mkdir -p /opt/aa/user_config_dir/storage
 
 COPY ./backup.aa /opt/aa/archive_specs/
